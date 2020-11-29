@@ -54,7 +54,7 @@ def check_urls(urls, regex, sleep_time):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description="pulse check")
-    parser.add_argument('--urls', type=str, nargs='+',
+    parser.add_argument('--urls', type=str, nargs='+', required=True,
                         help='URLs to check')
     parser.add_argument('--sleep', '-s', type=int, default=settings.SLEEP_BETWEEN_CHECKS,
                         help='Seconds between checks')
